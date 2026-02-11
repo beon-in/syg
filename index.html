@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Springhill Yume Green - Hunian Modern Investasi Properti Premium</title>
+    <meta name="description" content="Dapatkan hunian eksklusif di Springhill Yume Green. Kawasan premium bertumbuh, nempel dengan BSD, fasilitas lengkap, akses tol mudah, dan promo DP 0%. Unduh brosur sekarang!">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    
+    <style>
+        :root {
+            --forest-green: #1a2e26;
+            --gold: #c5a059;
+            --cream: #f4f1ea;
+            --text-dark: #2c2c2c;
+        }
+
+        body { 
+            font-family: 'Lato', sans-serif;
+            background-color: var(--cream); 
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4, .navbar-brand { font-family: 'Playfair Display', serif; }
+
+        /* NAVBAR */
+        .navbar { 
+            background: rgba(26, 46, 38, 0.88);
+            border-bottom: 1px solid var(--gold);
+            padding: 1rem 0;
+        }
+
+        /* HERO */
+        .hero-header {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                        url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhjj7xtcs-ZuRGyST1WYrXGisHa7NSvOTzKDnfjBjmg5IZLpo5TZCuhJFkE3MnoUxtEWjBum8zIAYnwPhobm0nmPMXCHAeX-NdUJcIw2fb2apTy76spAQE1D07troZUCjyo3XYsJrgKKjqnSCkRCflfvk__yCxCwARbMzzoC2lX4NUNThytHqGnpdFgAQ/s1600/SYG%205%20-%20Header.webp');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-content h1 { font-size: 4.5rem; }
+        @media (max-width: 768px) { .hero-content h1 { font-size: 2.5rem; } }
+
+        /* GALLERY & CARDS */
+        .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
+        @media (max-width: 768px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); } }
+
+        .unit-card {
+            background: white;
+            border: none;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: 0.3s ease-in-out;
+            height: 100%;
+        }
+        .unit-card:hover { transform: translateY(-10px); }
+
+        .price-tag { color: var(--gold); font-size: 1.4rem; font-weight: 700; }
+        
+        .spec-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            border-top: 1px solid #eee;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            text-align: center;
+        }
+        .spec-item i { display: block; color: var(--gold); font-size: 1.3rem; }
+
+        /* VIDEO WRAPPER */
+        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; border-radius: 12px; overflow: hidden; }
+        .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+        .promo-banner {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgt71E7_iOWLHTFzD4xKGt-_kSdFr25pqjoPRWNzvHxwh1fOLKeD3yFpDSqgUlbIv9dvqh_rPz8PEYUyePhXsUfBVbUyCpb1qoavNMPiw0YhxEe585u1ykpfJ2r2TKQ6iHh2ZukTmj2TtJ-aXW0LDhyhyphenhyphen40js-rFy4Y7mNninP6WBd067CTFg1Vs98kdg/s1600/SYG%202%20-%20Header.webp');
+            background-size: cover; background-attachment: fixed; padding: 100px 0; color: white;
+        }
+
+        .btn-gold { background: var(--gold); color: white; font-weight: 700; border-radius: 0; transition: 0.3s; }
+        .btn-gold:hover { background: #ad8b4b; color: white; }
+
+        #backToTop {
+            position: fixed; bottom: 30px; right: 30px; display: none;
+            background: var(--forest-green); color: var(--gold);
+            border: 1px solid var(--gold); width: 50px; height: 50px; border-radius: 50%; z-index: 999;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEimqB8nbfOHMzp7hqVQNFX-Iam8_k8pCeYVsiyTNLv04UBkse7Q3Ih1a1-S3OTqnISYFvH29kdh1xMW-iK4mVeu0qwxe8pSZaK8HofCwN2tTuJKVJYAN2fP3tB-mGrTARogFUwPKY880R7hWLXPhQs7StOv4V2WkALSgo5keLHpebwGzJFfbFbNHFoQDg/s1600/imgi_10_yume-logo.png" height="50"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#fasilitas">FASILITAS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#site">SITEPLAN</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#unit">TYPE UNIT</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#progress">INSIGHT</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#kontak">CONTACT US</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="hero-header">
+        <div class="container hero-content">
+            <p style="color: var(--gold); letter-spacing: 4px; font-weight: 800;">HUNIAN NEMPEL BSD</p>
+            <h1>@ Springhill Yume Green</h1>
+			<p class="fs-4"> Green Living Concept dimana kedamaian alam tepat berada di halaman depan rumah </p>
+            <div class="d-flex justify-content-center gap-3 mt-4">
+                <a href="#kontak" class="btn btn-gold btn-lg px-4">UNDUH BROSUR</a>
+                
+            </div>
+        </div>
+    </header>
+
+    <section class="py-5 bg-white">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-4">
+                    <h2 class="text-dark fw-bold mb-4">Springhill Yume Green</h2>
+                    <p class="text-muted lh-lg">Sebuah kawasan hunian yang menggabungkan konsep kehidupan perkotaan dengan ruang hijau yang melimpah, menciptakan oasis yang tenang di tengah kota.  <b>Springhill Yume Green</b>, merupakan buah kesuksesan dan pendahulu dari <i>Springhill Yume Lagoon</i> dengan prestasi, dan pencapaian yang memuaskan.<br/> Springhill Yume Green dikembangkan oleh <b>Springhill Group</b>, dan <b>Hankyu Hanshin Properties</b>, Pengembang Properti dari Jepang </p>
+                    <div class="row g-3 mt-2">
+                        <div class="col-6"><i class="bi bi-check-circle-fill text-gold me-2"></i> Dekat 4 CBD BSD</div>
+                        <div class="col-6"><i class="bi bi-check-circle-fill text-gold me-2"></i> Aksesibiltas Mudah </div>
+                        <div class="col-6"><i class="bi bi-check-circle-fill text-gold me-2"></i> Potensi Investasi Tinggi</div>
+                        <div class="col-6"><i class="bi bi-check-circle-fill text-gold me-2"></i> Fasiltas Lengkap</div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh3VQlYhw7UWDyKHZk1Ao92_gqXg8shXu1ucUCo6pkfcSL1YP8ONvS9E73ewIuteIolCMhe82zZe1KyPTtgsai_Pg43d_pPptjEO1h-89SxaZ0Y_ovwORwlOfBlTh2Nr9Jwahm-5LjKtYDRWjg1oRfapQSaZ8Ns1oKXROlLMu-QIrYHs5F6fUFHONRWtw/s1600/SYG%201-Lokasi.webp" class="img-fluid rounded shadow-lg" alt="Masterplan">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="fasilitas" class="py-5 bg-light">
+        <div class="container py-4">
+            <h2 class="text-center fw-bold mb-5">Fasilitas Eksklusif</h2>
+            <div class="gallery-grid">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjg8Q_nwHyX5wfSXlgwmx-WrsFDU9YMSOJTybmLxn1fU2V9mGwI8kq6HiCa_tf-a8H3VnZm2_EZLrb4x6sEO-c28INseVkEOP5A3BsyKV_TwZP642tPcvTuuyDI0g3pLrPQyccDeoggOoIhpNGqCfxujeCSWmui_SDtbofN93XFRwHPZaFUNnrBy6h1LA/s1600/SYG%201-Fasilitas.webp" class="img-fluid rounded shadow-sm">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg1QfuqkNKisbGRDjayufiAXPXIMswEEQondT_ASgH_iRmcsPNhqEwE6ejhQglg-uQs7DBVehMxU8sU-qR2K65aP8C8DXJAjDqvGjAWG_cPxEbpFWP2odVY9IUD2E7SwD0DpNt4HFje5fIk247-7Heewc-OB1wuWWWPfCIs64tBPdTZX9pRoiA8sJuJvQ/s1600/SYG%202-Club%20House.webp" class="img-fluid rounded shadow-sm">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgU5DdGrS3uWakJ6rhjc4mRCxJNlRdCEpjJwS9GiUgBEpDZJmn8iZFEHgM7PyRH7noxzIhyCXiA31R1rsvDFDWDTk7kgj5mfAn3vqppIROMpmJhYaOzHSVsB15xUfPjNMJPrf-8hjCCnArIgbgdQ2adpImSiO7PKzmhZSeWku2Cm7zYRBmCdpIiVxpijw/s1600/SYG%203-Area%20Komersial.webp" class="img-fluid rounded shadow-sm">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEixL9BucI-poe2sfuzJBMD3b5nh7NbI0n8Q0VXEVvaiQTXgTiqxuOP9KiwGJ9lwmCE0Hd3EVM0u2U7xDZColiN-sM3SeOO3KUxGbpWoA8N-gJHYEPzuKF4JJ6EGSTqWP6UqRbVOvFfInns_UDckI3L6nguZisraiqg3WytWRMQGQdHxP2b-fhBABT4DuQ/s1600/SYG%204-Masjid.webp" class="img-fluid rounded shadow-sm">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiBksQ6AHIgoPWd_HcjY5lrcC-dKf9xB8UHHzL4SQK-OPcHz_BTcFo9QL8DcCb56XCrZeMfTUoiKfp-c01nj4iXm9WHOjt9cGxziaKcNLjjI-dcVw8CxdGTUjTdFhKR0ZrO2JriJn4-5-4mdv7Cfb3ZVSPA_hzvwfjQ_SR_DRj0apTe4u9bt-B3uHSt2w/s1600/SYG%205-Functional%20Hall.webp" class="img-fluid rounded shadow-sm">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhQks6xcM_9S5f6st3U1OP9l0Of40iUccLnFF281O70EcPpyQShltFSwhENdSytfIHmzU1C5nx3951tHDC84sdxEZKm3Q_nWkiOZFoBDNep4TU8sc48QDzIgfl9UF_OYXIS38X-CvTWLoZJ-xUCBAySL8u8OjfS_p5ZHh_K9OmhITBpGZwq6rmUpFV0Tw/s1600/SYG%206-Akses%20Shuttle.webp" class="img-fluid rounded shadow-sm">
+            </div>
+        </div>
+    </section>
+
+    <section id="site" class="py-5 bg-light">
+        <div class="container py-4 text-center">
+		    <p style="color: var(--gold); letter-spacing: 4px; font-weight: 700;">PHASE - 1</p>
+            <h2 class="fw-bold mb-5">SITEPLAN</h2>
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg5TbzKPVOkxTxuKWPbUdueNtGS8cQX6ty-ET7cJkA0MAsp4UrepGMJHyLZ7PeGog3t-VPriBXlEPHU3dEaxvLlXkGDSDglelWkCV4vaK5RwUGkIRDzUoo63MLKkJI9SxNf3XUL-10OH9vTZamjwu0SO4QC8k3Acl_u5G0rYevcABLW_pywjkPa9fjiTg/s1600/SYG%205%20-%20Siteplan.webp" class="img-fluid rounded shadow-lg mb-4" alt="Siteplan Lake Vista">
+            <p class="max-auto col-md-8 offset-md-2 text-muted"></p>
+        </div>
+		
+    </section>
+
+    <section id="unit" class="py-5 bg-white">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold">Detail Tipe Unit</h2>
+                <div style="width: 70px; height: 3px; background: var(--gold); margin: 20px auto;"></div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="unit-card">
+                        <div id="carouselUnit1" class="carousel slide card-carousel" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEga8toXr47ErnrYdYswZDZJ7yuKytBgqA7chgDi1dmLmVijnNIIbGnBLixp4nwFtqHOGtcw_i03bS7GT4-ERJoqGWpU0EXYNqMT0k80-RsxlYg_qlC_onof1ydCcU0Oa9stx3iMBuX9xqATatSAoz2zPB9W5axo_aBvC_OgEs5GOzDGsszhszYcZtfbsg/s1600/SYG%201%20-%20Ayame.webp" class="d-block w-100"></div>
+                                <div class="carousel-item"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj4SqkZlgCBq-kuP2YwMqhw8OMbbSt_YgvJHSTa3PwyE6H7v4GBeWk0vmA9bM2t9Ynms72NGMnQFSEsrwVA_M-HNj9h7n__qvFYl9eMuAnQUpu8X_RVh9OFAsBT9f3AzyPvnRCbM4PR5SDnIAYofl7CDZl4k0BIQoBkyBpcqIAs-KxyIjsSX5Qfrpb6Ig/s1600/SYG%202%20-%20Ayame%20L.webp" class="d-block w-100"></div>
+								<div class="carousel-item"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi41XqvIKe9U1GUwokzAQA3bYgaBpR_i9votQVi8mrIZ_rarvq9KuQRQXyGzvuYhxy7xMOZA_RToi2H0IOddxBEqm2CmAvxDdTXIcC6mUDS7y4MKtNpluOi2SLJhAs5Yh18vdmoZigUipFYMLZfAEVW2J3rmjOb4EHuErdo8Q0oZVjWa2ufLjh-KVIh5w/s1600/SYG%203%20-%20Ayame%20LR.webp" class="d-block w-100"></div>
+                                <div class="carousel-item"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj7wgaKMOC1XPkHCUMKCqsukVg4Dd7I-F9Pdl3Ewac2tdRs1zbMadmF6dwfF72Vf-adSljUxDzzNrN05dun7nnRyJqEzmpEQpjexOD93X_zkKyzPCZWYou-ADZQ2MntjJMudenPu0DgFOtwSPzqfz-rjvf9riCTWSOG4nVKxgp7QIAYyTpEiZkUpzTXDQ/s1600/SYG%204%20-%20Ayame%20BR.webp" class="d-block w-100"></div>
+								<div class="carousel-item"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj8iF7Ek6vjkmceLBKq5UK686oLBSzj0zsjf-2ru_4I5p4JIUXMzDALi_yGmdLGDzCglrUVnGkl_J3rbOCmfjDc7f3EyjcmLkXaTGdYkj-GbUdbDY8RbDgks2IAEEk-YOXU_00E_eo0jbvz_RSczYV6pju99WrHG2oL3IZdNnZwIr7Ip2FsYpr3kt4-NQ/s1600/SYG%206%20-%20Ayame%20BR.webp" class="d-block w-100"></div>
+                                </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselUnit1" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselUnit1" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+                        </div>
+                        <div class="card-body p-4">
+						    <p style="color: var(--gold); letter-spacing: 4px; font-weight: 700;">LT 60 / LB 36</p>
+                            <h4 class="fw-bold">Type AYAME</h4>
+                            <p class="price-tag">Angs. Rp.5 Juta-an</p>
+                            <div class="spec-grid">
+                                <div class="spec-item"><i class="bi bi-door-open"></i><span>2 Bed</span></div>
+                                <div class="spec-item"><i class="bi bi-droplet"></i><span>1 Bath</span></div>
+                                <div class="spec-item"><i class="bi bi-p-square"></i><span>1 Car</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="unit-card">
+                        <div id="carouselUnit2" class="carousel slide card-carousel" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjsrrV4jWZ3uKxi_tSYKYoIpVgcM-PWqjkiW3JAYIgoCSBLTUwvj6rpq5LQxv-X8cFKYSC9qnjPGU-PTiJotoy_B6YW69W7ZwO-f3jReKV2pmZ9gg4zmNNmFGuWDMyW5qLoigme2eyLoyuF8rbH1-z6LpUmi_X3IiExAfMR5URJrF9GM-Ny64FQxSZIwA/s1600/SYG%201%20-%20Yuzu.webp" class="d-block w-100"></div>
+								<div class="carousel-item"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgtCGt0zGVEcIWTdrSRBfjnawwqzUgfHSpJ-V4AoT3bqWe2LgiTXjY5S_Zy6yJUToh-8Kv9ktymjshR15dff76kSOMjZH4uxSVgtctCCch0P-nUWpF2is3aSCmJ0pdYVrTf4u87H7XNXfszSKjV2xwlwixFy1k4RIDc7D_MXxyyvZg464r158nMTZHbDg/s1600/SYG%202%20-%20Yuzu.webp" class="d-block w-100"></div>
+								<div class="carousel-item"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMzQiQsTmPVb6wFiM-r81q6KdFkSVFKivovRFRlq-oByN5FE-gKyQwCD_9GOMczS1fIwOg_HQCi7C9JZJZXHaIK5xBAoD8IvMNZJpOqAAsm5kYC92IJdHUKQT9CCtskb352SdptOwHAsZhODmrYcpC0we6WRH5lxn7q5QVK8GgjTyzj-WaVYZqw9LFsw/s1600/SYG%203%20-%20Yuzu%20LV.webp" class="d-block w-100"></div>
+								<div class="carousel-item"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgEdMIMzORhiefeTGBKXIuiWpPKgYkYJX9U9qbrldH94Os1Wd7JA7GCIgEgdkZmIRgFWwhrroChPizra2nLfhX2Gnn4z3RC9in6jJQquVy341aRimrYIT8_VdF3VKlgMJDkHwQbe2ldFMYBbKr426ysIyrWNv7iy6PZVcp_lIAMeuR4jNMDVdoAxNcmDQ/s1600/SYG%204%20-%20Yuzu%20LR.webp" class="d-block w-100"></div>
+								<div class="carousel-item"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg7hMmWMqNg3NBMUcmCxqKEazQ3Zx0_anyekImjIoEWHqb2GVYkcg1NSUIfiwbHzfnBKypwaeqRlbe_QjqMvC2t_7X4timRN6zKLA-k3hqVixUZaidwYEQFvZogfsusaWeqfZCnf4dn-dYb9amN1OplE7ILQghb6yrR5hsfrVuj-wDuAI7XEi5BE1qmgw/s1600/SYG%205%20-%20Yuzu%20BR.webp" class="d-block w-100"></div>
+								<div class="carousel-item"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiwRw6AIU3yjCuJmPN7laU0VWTeiC_YPGO3yF7KVGgX_QFyx_jjuLEsY5tZ7dUUhIYt0tSYm6wavsmrQd85tJ_6Rz_LpgoFgik8xHhCRUPrFw6QdmDUPnyxdZEhmWOB4GmAggX7NaYX42grGBb5re5kI_wEz3K5N9pMP5KxObDjg1viLHkRCXd_a9S00Q/s1600/SYG%206%20-%20Yuzu%20BY.webp" class="d-block w-100"></div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselUnit2" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselUnit2" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+                        </div>
+                        <div class="card-body p-4">
+						    <p style="color: var(--gold); letter-spacing: 4px; font-weight: 700;">LT 60 / LB 25.5</p>
+                            <h4 class="fw-bold">Type YUZU</h4>
+                            <p class="price-tag">Angs. Rp 5 Juta-an </p>
+                            <div class="spec-grid">
+                                <div class="spec-item"><i class="bi bi-door-open"></i><span>1 Bed</span></div>
+                                <div class="spec-item"><i class="bi bi-droplet"></i><span>1 Bath</span></div>
+                                <div class="spec-item"><i class="bi bi-p-square"></i><span>1 Car</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="unit-card">
+                        <div id="carouselUnit3" class="carousel slide card-carousel" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiWjzfRJDwTLSka0x6nLoSp6AhGZP0zOM2x8_e1gTU4BOvNL5HlmzzwPzm37ZHAtTO8uppGNdZdtn7j-N_aluPkxDbTGRzOYtWGclm4_rgT2e0eFfR5t56zPxkTKGb5Dl1R-JIeHvAw6ZJcgIX7mP7Uicl43flo-NnbQ6CFD6blQWPuaZpU5TBWCeJLjg/s1600/SYG%201%20-%20Tsutsuji.webp" class="d-block w-100"></div>
+                                <div class="carousel-item"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjlsD9WzVYAtVe5dE9lTcUFiwyh4PXjH0eCoNDmDcRr_JBPxCd5A3fn0n9SmyHiFF1Q6yc-w8MxjCSQcMnHlVJ7qiyUhXNelNCZUX7XxYVILZJDebcTI8AHDtv67_FDZ9CgTXbAieGM6tVVoeWzsmHJHpn18KRf6WhWcyDSOiv5KWbupFffoAfDuqMIVQ/s1600/SYG%202%20-%20Tsutsuji%20LR.webp" class="d-block w-100"></div>
+								<div class="carousel-item"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgmB8KPAY1A_9CMPIgyvA_SW-c2zbPUO95zMwGo9Z4bqYZyHYYEgLAaL5tHPouQ_7rXdMUf1QYXr-mdyQEP3oPQ9ieTnWIvcIVhXnuH5caOTk7PJhBuukMxAfWNuPRHF6vnq6VWJxOGcAEYYT1R-D-G9Aqkwz98FiO55Nr5cWJmLfFsxEOc8qHSROyQ4g/s1600/SYG%203%20-%20Tsutsuji%20Dining.webp" class="d-block w-100"></div>
+								<div class="carousel-item"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiAyqYIQh5eQkcuN9uSf1n8nr-1cb89-JixH1ixgcDCpUAqVYmLWXuBaCnUJ1HFW7s8KFia_TsgAo-JpnouwXPjK5qjc4j_4-6EqASOC2nKN5MNQf_ypdx2a3xcdn1GDuOIBUIofGln30BDjPXYhMhLfHXzfouE29ZeZJMtkrSpSDwt-4VhHV-ifchrrw/s1600/SYG%204%20-%20Tsutsuji%20BR.webp" class="d-block w-100"></div>
+								<div class="carousel-item"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi8o5si6zlAkQ4KRxf3RflgA4SkeYezC38x6aFXowFnUtANUaCrHnoaD_kVtPh-d7KfoBzhShFlBBvo2jRUGdRsZp4enAx4vaHwdKMqceKYKaNl2gzbgdZZbrzxOrpwDt9iQ4oRGz_ujVRJ4ShoWOXyaDizMIQW3psXQ-2JMMgmg_8zJfWT-ogYjv5bLw/s1600/SYG%205%20-%20Tsutsuji%20BR.webp" class="d-block w-100"></div>
+								<div class="carousel-item"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiQAl_nqoyVhVJKZDOo_gR27Od2tbQiGGtKNNoAa44PKkhWEMATbWOP7fLJcErUZxJmag2gQkXGn-43TECjSB7Ug-VvZnBRJ6Z_FzQUv2Oip1_ZvcfUfR9nh7N7fMJRnlRZvIA9V58AUQnTqanVAEEbPx-46R6hlrNNK4EzshyphenhyphenTVtBh5kkNV_0x8cygDw/s1600/SYG%206%20-%20Tsutsuji%20Toilet.webp" class="d-block w-100"></div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselUnit3" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselUnit3" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+                        </div>
+                        <div class="card-body p-4">
+						    <p style="color: var(--gold); letter-spacing: 4px; font-weight: 700;">LT 72 / LB 46</p>
+                            <h4 class="fw-bold">Type TJUTSUJI</h4>
+                            <p class="price-tag">Angs. Rp 6 Juta-an</p>
+                            <div class="spec-grid">
+                                <div class="spec-item"><i class="bi bi-door-open"></i><span>2 Bed</span></div>
+                                <div class="spec-item"><i class="bi bi-droplet"></i><span>1 Bath</span></div>
+                                <div class="spec-item"><i class="bi bi-p-square"></i><span>1 Car</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="unit-card">
+                        <div id="carouselUnit4" class="carousel slide card-carousel" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg2D-dJ9HcrCZUnOi-4HwDnhbhyphenhyphenOy_m2QMTcnVgPsOn4xcGRJzU97BGG6vyi4BM33flJZKVSX4PxQRE7wW3A9RKFwCehKqfLNwkTo1jN0za12qRBb99CzJFBEs5JIpSDQ4Vtk2EFkvPwSyKwLSjjq2rZ409UYTSk60HmV1FltWtDA8EsWpRXQtdH4dojw/s1600/SYG%201%20-%20Satsuki.webp" class="d-block w-100"></div>
+                                <div class="carousel-item"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjJuMJH5RPLFmiud4xzqGNUNpymcdiEI_9u2dg454AIbX6sL2Wd_Vqi2qtQuVy3HXM24O5haih3NjaPJ2JQOr9CRRTSgxU7IXwCUr5CV63QgfeZLIjm6LfhnoX6-XJ0w9CysOcKjB_aZYS8QiHEvIc-U5NWUm39eaoHp2jRJ-PoID5pM3qxn9sh99vBNA/s1600/SYG%202%20-%20Satsuki%20LR.webp" class="d-block w-100"></div>
+								<div class="carousel-item"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiHO0bObG_XnZpAeIGbV4pTUGUrsFB1Q4H0ue7qNUDFaE84HosSJOu733XjJ5zgAwsvMO9xk6p09k16684aEq7NV-pgWddXOdBtUtKeHQQrxHYlFn9JThPNbFqZdRnGTHkUg4abUFKTqTeJAm-dY0aTWWVhDfL_rijm1-KYLq59q629GaceOlGU2QGcZg/s1600/SYG%203%20-%20Satsuki%20Kitchen.webp" class="d-block w-100"></div>
+								<div class="carousel-item"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgAvmWCDUlATG6DOpkGUINY6HtjsXyu87zyMbDHToG6lZquPiLYlX2mwla8yyr-Jwkp2Q9jPsSkfSTnwIT7QwTebL03hex_sBNrXgErc5S1w22nDcBV6_sEcD-WVBS59RSEwAU5T5fY0Ok60iOSQ7U6ceybQtfwp7KCuUksLWYrT7Gy3Q5Bj9-F6rSo1w/s1600/SYG%204%20-%20Satsuki%20BR.webp" class="d-block w-100"></div>
+								<div class="carousel-item"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjX7j2_TRPGOy0N17MhUWCrViOS6cEUSaLsjzGHF5M5zeRrwZZKaJlkm-XKUxqPjOq-VUFYCtyKN9pGXEoWx9-0Hl3ABlgNBypDLeFijfnha4vFCVaonGRLe1UWm_8l3Q1KMnItKElxE3MteRA9NLQWs8gaRnPoPsDUIIbLomHqSqXMqwOwT7ptlx1wGw/s1600/SYG%205%20-%20Satsuki%20BR.webp" class="d-block w-100"></div>
+                                </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselUnit4" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselUnit4" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+                        </div>
+                        <div class="card-body p-4">
+						    <p style="color: var(--gold); letter-spacing: 4px; font-weight: 700;">LT 72 / LB 71.9</p>
+                            <h4 class="fw-bold">Type SATSUKI</h4>
+                            <p class="price-tag">Angs. Rp. 6 Juta-an</p>
+                            <div class="spec-grid">
+                                <div class="spec-item"><i class="bi bi-door-open"></i><span>2+1 Bed</span></div>
+                                <div class="spec-item"><i class="bi bi-droplet"></i><span>2+1 Bath</span></div>
+                                <div class="spec-item"><i class="bi bi-p-square"></i><span>1 Car</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="unit-card">
+                        <div id="carouselUnit5" class="carousel slide card-carousel" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQV8qkDI8qpADhG2-8PgxNC3QLWrf4IEESN3OAdJyByxCA6bZw5nCko4fPIHli30yoP-93j5BOqruoRUBAjPsFuhWSOqa1c8VOII76y9kLipOv6xDg-S8I9Dvp_2r_aqEPbti_ALH9oavmFyf5ad04hTEg00TYeOkpsJaNQNN75m-42GPqSqxlrWXvfw/s1600/SYG%201-Asagao.webp" class="d-block w-100"></div>
+                                <div class="carousel-item"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjtMGjzul93nIas5fDuAmbAK6oEIAhTgiasdscrBTCdhHR7mNPySNYXUxvsybzA71oUOVPAO_v9rGUwgOLL1hWmo74njnsZejW33YIZYTDtsczABF38lNjhJz1qB352GW-GRziVuX7P6Ch8aHmt4x1apAvXhERixgTiEQHeYIps4PmbblW1LLPBR197fw/s1600/SYG%202-Asagao%20LR.webp" class="d-block w-100"></div>
+								<div class="carousel-item"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjrIl51rhnLMyIutM-J3zYm-2WMyiJPmb8F4Gy6FE-2959wihUl_lf8rZhdXxQKzkH45eZB77DJeVTY2yYBfTAO3mOONlFtJJ3V2tpYgKVL7CuW6tjnC5O3stpMS56QhVZaF26WEfNBxP8edx2PzLW-MlKJL6K_jV-qzVFchyphenhyphenlEd7TQfTnz3GE1RGyqig/s1600/SYG%203-Asagao%20BR.webp" class="d-block w-100"></div>
+								<div class="carousel-item"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhTCbSO5wsKUWfYm_yv2229KOIcrecixAYCNgGVZC2FB_g0jySgoJg1mxRbx-RgxqqzSmJN9An_y6KASC22eJtX0Il4TkfNDWbxa5WfBgtAWG7UknpiFDyCa-8jxtazWuhG01piZc2zxvPYg0vMlID4U3yBcadvuntoJmNIBf85G8b5bT1IjuFm-JqFRA/s1600/SYG%204-Asagao%20BR.webp" class="d-block w-100"></div>
+								<div class="carousel-item"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjisIXkzE4-66P_FNObQYKIRkgv5sF_GsujrDM1QbUa8dKkEwgFBQ0sXqF6f0jxT2mhT04F0Puwj6IN1QUz0ERZTFLEjyQ-h2jOWakCAYJAb2V-OId4cmoXxgacQ-IJ5Kz65z_AtrU0dhKq5pb4kUAu8TS44mP1Wbme86pC8ZG_KlMGDUGwUO7GyEdMTQ/s1600/SYG%205-Asagao%20T.webp" class="d-block w-100"></div>
+								<div class="carousel-item"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi73VBob6LvZAC66tvwf3_u_rTfpaONYZS1YvXeyFALqqUq-H8hvNbocMGMVh1Z_Xt7RLur-MZ3xB0DRs3kEdEqM_dBWTSnfqhbxNRR7SxDYqUz7HyyNJZK-Sii8KWhtBRUaV6hkyConOFxk5OtqDD04BYUu1mLyOVCUQ9Fu2yTlSDC5vp5vGxLEtmAVw/s1600/SYG%206-Asagao%20Back%20Yard.webp" class="d-block w-100"></div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselUnit5" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselUnit5" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+                        </div>
+                        <div class="card-body p-4">
+						    <p style="color: var(--gold); letter-spacing: 4px; font-weight: 700;">LT 112 / LB 104.2</p>
+                            <h4 class="fw-bold">Type ASAGAO</h4>
+                            <p class="price-tag">Angs. Rp 8 Juta-an</p>
+                            <div class="spec-grid">
+                                <div class="spec-item"><i class="bi bi-door-open"></i><span>3+1 Bed</span></div>
+                                <div class="spec-item"><i class="bi bi-droplet"></i><span>3+1 Bath</span></div>
+                                <div class="spec-item"><i class="bi bi-p-square"></i><span>2 Car</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="unit-card">
+                        <div id="carouselUnit6" class="carousel slide card-carousel" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjUjojcK-w4YukoGFSChyd2erQ1QsPo2AUGJlzPIsxl39Ykoj7V9VrGlFHRngp9OLd3V-gte-gPbN6ZOfK42km8qU1DxhcUZBU-gTfCFtex86hwhK4ddBLZXgmHwL6QV5H6u_G8_w-jjtsc5aS1tTBhV3GQ8yMEdDfjMSdyk2oZ7prLVR9FJyIjRhpEzw/s1600/SYG%201%20-%20Ruko%20Type%20A.webp" class="d-block w-100"></div>
+                                <div class="carousel-item"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhBnm2cntEzXo8taKe5W3B8fSUzy2Ly3vSXtrq630A7ILk12MSJIjs_8A0zfeB2kFJHJ0T6Fd8vMbLbyuZEPSvlluZwP17bMlVp6BiDPSC-FskKNC5AuRgLUdCkfs3vxoEof8dkE6BhXJJBlwL712NVMODb3m3dSuF18vRbDB278N4hru9EKXwgiHbmrg/s1600/SYG%202%20-%20Denah%20Ruko%20Type%20A.webp" class="d-block w-100"></div>
+								<div class="carousel-item"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi0Xuy1DCPHQjY9MoRVd2wD5yQ_BrdHp2uvIY1p22PFth-DxUqC6u-ZziAtuSdXwvF3o_sXw2DVbNIO2DJ3Vc23bnCuw_4tlsBGmI0EnlBVSx4CdbbQVITe4g2zYxmWZVIoh2bJYFUOG4b02IwLlXfAL9upbP0XBCwNP9hjLodUCk85t6he2GzyapRXQQ/s1600/SYG%203%20-%20Ruko%20Type%20B.webp" class="d-block w-100"></div>
+								<div class="carousel-item"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh6nL5CaB2Pn_LbiNcSmiKGeUmaHIFcB8c2LIAwZE-a_5YztUAtjbx-RKFL0PSkG_dxmoVUdovByX53agrm2058yLUmB-ibY1S8ffhascDWCotf1e6nDc5NKAasG0X6Fcd37gAGEHeBWtOXl3e_mBjAOsVts4b_Wlg6t4cZ4KiZVoZ7dOjbNeDzKKukqw/s1600/SYG%204%20-%20Denah%20%20Ruko%20Type%20B.webp" class="d-block w-100"></div>
+								
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselUnit6" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselUnit6" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+                        </div>
+                        <div class="card-body p-4">
+						    <p style="color: var(--gold); letter-spacing: 4px; font-weight: 700;">Ruko 2 & 3 Lantai</p>
+                            <h4 class="fw-bold">MIDORI Shophouse</h4>
+                            <p class="price-tag">Mulai Rp 1.2 M</p>
+                            <div class="spec-grid">
+                                <div class="spec-item"><i class="bi bi-door-open"></i><span>n/a Bed</span></div>
+                                <div class="spec-item"><i class="bi bi-droplet"></i><span>n/a Bath</span></div>
+                                <div class="spec-item"><i class="bi bi-p-square"></i><span>n/a Car</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="progress" class="py-5 bg-white text-center">
+        <div class="container py-4">
+            <h2 class="fw-bold mb-5">Project Insight</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.blogger.com/video.g?token=AD6v5dxH0BPPPYOMsEiHa8SvJ9u36EmTVQ6y6-PQ9AG4wnwAHL3cdRNZtEcwuC_CQAmcmJpPXswNtYapjdyvIymMqsd-iW2bsyjEV5IYZWX2hNcZld3H9FmGchb62XQKiO5Heey4nKmA" allowfullscreen></iframe>
+                    </div>
+                    <p class="mt-3 fw-bold">Insight Springhill Yume Green </p>
+                </div>
+                <div class="col-md-6">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.blogger.com/video.g?token=AD6v5dxWkufQ9YfNwK_ZiIl_JYaaQdszcAoJtoZy8s-MzMAQNPxazTc-GlKemIQfsUUj7rqhfLYbYKNyN6a5wmcgc3cDupsAoZ0kt1cknJ1tgPFu5rrBVv92bghL-sJPz0KoPJdc830" allowfullscreen></iframe>
+                    </div>
+                    <p class="mt-3 fw-bold">Review Type Asagao</b></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="promo" class="promo-banner text-center">
+        <div class="container">
+            <h2 class="display-5 fw-bold mb-4">PROMO BULAN INI</h2>
+            <p class="fs-4">FREE PPN* <br/>FREE Biaya BPHTB sd SHM <br/>AC Di Tiap Kamar <br/>Smart Doorlock <br/>Kanopi <br/>+ Voucher hingga puluhan juta <br/></p>
+            <div class="badge bg-danger fs-5 px-4 py-2 mt-3">Unit Terbatas!</div>
+        </div>
+    </section>
+
+    <section id="kontak" class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="row g-5 align-items-center">
+                <div class="col-md-6">
+                    <div class="card border-0 shadow p-4">
+                        <h3 class="fw-bold mb-3">Unduh Brosur Comprehensive </h3>
+						<p class="mb-4"><i>Springhill Yume Green (file pdf. 2.77 MB)</i></p>
+                        <form id="leadsForm">
+                            <input type="text" name="nama" class="form-control mb-3 py-3" placeholder="Nama Lengkap" required>
+                            <input type="email" name="email" class="form-control mb-3 py-3" placeholder="Email Aktif" required>
+                            <input type="tel" name="whatsapp" class="form-control mb-4 py-3" placeholder="No. WhatsApp" required>
+                            <button type="submit" id="submitBtn" class="btn btn-gold w-100 py-3 fs-5">KIRIM & DOWNLOAD</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-6 text-center border-start">
+                    <i class="bi bi-whatsapp text-gold display-4"></i>
+                    <h4 class="fw-bold mt-3">Tanya Lewat WhatsApp</h4>
+                    <p class="mb-4">Chat marketing kami untuk respon cepat.</p>
+                    <a href="https://wa.link/mvcimo" class="btn btn-success btn-lg px-5 py-3 rounded-pill shadow">CHAT SEKARANG</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-5 bg-dark text-white text-center border-top border-gold">
+        <div class="container">
+            <p class="small text-secondary mb-0">© 2026 Springhill Yume Green Residence By: <a href="https://www.listings.my.id" target="_blank"> <b>Listings.my.id</b></a></p>
+			<p class="small text-secondary mb-0"><i>Member Agent of NAM3 Property </i>- All Rights Reserved</a></p>
+        </div>
+    </footer>
+
+    <button onclick="scrollToTop()" id="backToTop"><i class="bi bi-arrow-up"></i></button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const topBtn = document.getElementById("backToTop");
+        window.onscroll = () => {
+            topBtn.style.display = (window.scrollY > 400) ? "block" : "none";
+        };
+        const scrollToTop = () => window.scrollTo({top: 0, behavior: 'smooth'});
+
+        const form = document.getElementById('leadsForm');
+        const btn = document.getElementById('submitBtn');
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzU4vqq6iEFB6vd12IvIC21F9Aa8NEHNRS9mY_SXqQpK8R-Q0wKBIM4BEN4IbRUCdxz/exec';
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            btn.disabled = true;
+            btn.innerHTML = "Mengirim...";
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(res => {
+                    alert('Data terkirim! Brosur akan terbuka di tab baru.');
+                    window.open('https://drive.google.com/file/d/1wg0CboHjS0FcaaRlMkD42k7Ima0WC5ph/view?usp=sharing', '_blank');
+                    form.reset();
+                    btn.disabled = false;
+                    btn.innerHTML = "KIRIM & DOWNLOAD";
+                })
+                .catch(err => {
+                    btn.disabled = false;
+                    btn.innerHTML = "KIRIM & DOWNLOAD";
+                    alert('Gagal mengirim data.');
+                });
+        });
+    </script>
+</body>
+</html>
